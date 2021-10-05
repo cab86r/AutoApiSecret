@@ -42,8 +42,9 @@ def main():
     'Authorization':access_token,
     'Content-Type':'application/json'
     }
-    while 1==1:
-        try:
+    
+    try:
+        while 1==1:
             if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root',headers=headers).status_code == 200:
                 num1+=1
                 print("1调用成功"+str(num1)+'次')
